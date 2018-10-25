@@ -9,7 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property int $accepting_patients
- * @property \Cake\I18n\FrozenTime $created_at
+ * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
  * @property \App\Model\Entity\Appoinment[] $appoinments
@@ -29,7 +29,7 @@ class Doctor extends Entity
     protected $_accessible = [
         'name' => true,
         'accepting_patients' => true,
-        'created_at' => true,
+        'created' => true,
         'modified' => true,
         'appoinments' => true
     ];

@@ -29,8 +29,8 @@ class InvoiceFixture extends TestFixture
         'ammount' => ['type' => 'decimal', 'length' => 10, 'precision' => 0, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'services' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'duedate' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-        'created_at' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-        'modified_at' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
@@ -55,8 +55,8 @@ class InvoiceFixture extends TestFixture
                 'ammount' => 1.5,
                 'services' => 'Lorem ipsum dolor sit amet',
                 'duedate' => '2018-10-25',
-                'created_at' => '2018-10-25 14:19:09',
-                'modified_at' => '2018-10-25 14:19:09'
+                'created' => '2018-10-25 14:37:36',
+                'modified' => '2018-10-25 14:37:36'
             ],
         ];
         parent::init();

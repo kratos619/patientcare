@@ -23,8 +23,8 @@
                 <th scope="col"><?= $this->Paginator->sort('patient_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('doctor_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('appoinment_date') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified_at') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,8 +35,8 @@
                 <td><?= $appoinment->has('patient') ? $this->Html->link($appoinment->patient->name, ['controller' => 'Patients', 'action' => 'view', $appoinment->patient->id]) : '' ?></td>
                 <td><?= $appoinment->has('doctor') ? $this->Html->link($appoinment->doctor->name, ['controller' => 'Doctors', 'action' => 'view', $appoinment->doctor->id]) : '' ?></td>
                 <td><?= h($appoinment->appoinment_date) ?></td>
-                <td><?= h($appoinment->created_at) ?></td>
-                <td><?= h($appoinment->modified_at) ?></td>
+                <td><?= h($appoinment->created) ?></td>
+                <td><?= h($appoinment->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $appoinment->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $appoinment->id]) ?>

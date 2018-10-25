@@ -11,8 +11,8 @@ use Cake\ORM\Entity;
  * @property float $ammount
  * @property string $services
  * @property \Cake\I18n\FrozenDate $duedate
- * @property \Cake\I18n\FrozenTime $created_at
- * @property \Cake\I18n\FrozenTime $modified_at
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  *
  * @property \App\Model\Entity\Patient $patient
  */
@@ -33,8 +33,8 @@ class Invoice extends Entity
         'ammount' => true,
         'services' => true,
         'duedate' => true,
-        'created_at' => true,
-        'modified_at' => true,
+        'created' => true,
+        'modified' => true,
         'patient' => true
     ];
 }

@@ -25,7 +25,6 @@
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('accepting_patients');
-            echo $this->Form->control('created_at');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

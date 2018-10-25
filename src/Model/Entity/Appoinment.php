@@ -10,8 +10,8 @@ use Cake\ORM\Entity;
  * @property int $patient_id
  * @property int $doctor_id
  * @property \Cake\I18n\FrozenTime $appoinment_date
- * @property \Cake\I18n\FrozenTime $created_at
- * @property \Cake\I18n\FrozenTime $modified_at
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  *
  * @property \App\Model\Entity\Patient $patient
  * @property \App\Model\Entity\Doctor $doctor
@@ -32,8 +32,8 @@ class Appoinment extends Entity
         'patient_id' => true,
         'doctor_id' => true,
         'appoinment_date' => true,
-        'created_at' => true,
-        'modified_at' => true,
+        'created' => true,
+        'modified' => true,
         'patient' => true,
         'doctor' => true
     ];

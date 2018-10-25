@@ -25,7 +25,7 @@ class PatientsFixture extends TestFixture
         'pincode' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'email' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'phone' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'created_at' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
@@ -54,8 +54,8 @@ class PatientsFixture extends TestFixture
                 'pincode' => 1,
                 'email' => 'Lorem ipsum dolor sit amet',
                 'phone' => 1,
-                'created_at' => '2018-10-25 14:20:44',
-                'modified' => '2018-10-25 14:20:44'
+                'created' => '2018-10-25 14:37:52',
+                'modified' => '2018-10-25 14:37:52'
             ],
         ];
         parent::init();

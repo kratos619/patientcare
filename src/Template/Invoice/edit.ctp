@@ -27,8 +27,6 @@
             echo $this->Form->control('ammount');
             echo $this->Form->control('services');
             echo $this->Form->control('duedate');
-            echo $this->Form->control('created_at');
-            echo $this->Form->control('modified_at');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

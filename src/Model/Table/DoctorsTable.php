@@ -68,11 +68,6 @@ class DoctorsTable extends Table
             ->requirePresence('accepting_patients', 'create')
             ->notEmpty('accepting_patients');
 
-        $validator
-            ->dateTime('created_at')
-            ->requirePresence('created_at', 'create')
-            ->notEmpty('created_at');
-
         return $validator;
     }
 }

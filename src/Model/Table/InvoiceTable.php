@@ -19,6 +19,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Invoice patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Invoice[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Invoice findOrCreate($search, callable $callback = null, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
 class InvoiceTable extends Table
 {
@@ -36,6 +38,8 @@ class InvoiceTable extends Table
         $this->setTable('invoice');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->addBehavior('Timestamp');
 
         $this->belongsTo('Patients', [
             'foreignKey' => 'patient_id',
@@ -70,16 +74,6 @@ class InvoiceTable extends Table
             ->date('duedate')
             ->requirePresence('duedate', 'create')
             ->notEmpty('duedate');
-
-        $validator
-            ->dateTime('created_at')
-            ->requirePresence('created_at', 'create')
-            ->notEmpty('created_at');
-
-        $validator
-            ->dateTime('modified_at')
-            ->requirePresence('modified_at', 'create')
-            ->notEmpty('modified_at');
 
         return $validator;
     }

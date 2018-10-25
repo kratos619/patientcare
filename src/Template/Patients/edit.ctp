@@ -32,7 +32,6 @@
             echo $this->Form->control('pincode');
             echo $this->Form->control('email');
             echo $this->Form->control('phone');
-            echo $this->Form->control('created_at');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

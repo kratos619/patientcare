@@ -37,12 +37,12 @@
             <td><?= h($appoinment->appoinment_date) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created At') ?></th>
-            <td><?= h($appoinment->created_at) ?></td>
+            <th scope="row"><?= __('Created') ?></th>
+            <td><?= h($appoinment->created) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Modified At') ?></th>
-            <td><?= h($appoinment->modified_at) ?></td>
+            <th scope="row"><?= __('Modified') ?></th>
+            <td><?= h($appoinment->modified) ?></td>
         </tr>
     </table>
 </div>

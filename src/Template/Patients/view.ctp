@@ -53,8 +53,8 @@
             <td><?= $this->Number->format($patient->phone) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created At') ?></th>
-            <td><?= h($patient->created_at) ?></td>
+            <th scope="row"><?= __('Created') ?></th>
+            <td><?= h($patient->created) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Modified') ?></th>
@@ -70,8 +70,8 @@
                 <th scope="col"><?= __('Patient Id') ?></th>
                 <th scope="col"><?= __('Doctor Id') ?></th>
                 <th scope="col"><?= __('Appoinment Date') ?></th>
-                <th scope="col"><?= __('Created At') ?></th>
-                <th scope="col"><?= __('Modified At') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($patient->appoinments as $appoinments): ?>
@@ -80,8 +80,8 @@
                 <td><?= h($appoinments->patient_id) ?></td>
                 <td><?= h($appoinments->doctor_id) ?></td>
                 <td><?= h($appoinments->appoinment_date) ?></td>
-                <td><?= h($appoinments->created_at) ?></td>
-                <td><?= h($appoinments->modified_at) ?></td>
+                <td><?= h($appoinments->created) ?></td>
+                <td><?= h($appoinments->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Appoinments', 'action' => 'view', $appoinments->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Appoinments', 'action' => 'edit', $appoinments->id]) ?>
@@ -102,8 +102,8 @@
                 <th scope="col"><?= __('Ammount') ?></th>
                 <th scope="col"><?= __('Services') ?></th>
                 <th scope="col"><?= __('Duedate') ?></th>
-                <th scope="col"><?= __('Created At') ?></th>
-                <th scope="col"><?= __('Modified At') ?></th>
+                <th scope="col"><?= __('Created') ?></th>
+                <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($patient->invoice as $invoice): ?>
@@ -113,8 +113,8 @@
                 <td><?= h($invoice->ammount) ?></td>
                 <td><?= h($invoice->services) ?></td>
                 <td><?= h($invoice->duedate) ?></td>
-                <td><?= h($invoice->created_at) ?></td>
-                <td><?= h($invoice->modified_at) ?></td>
+                <td><?= h($invoice->created) ?></td>
+                <td><?= h($invoice->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Invoice', 'action' => 'view', $invoice->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Invoice', 'action' => 'edit', $invoice->id]) ?>

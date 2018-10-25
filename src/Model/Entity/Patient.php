@@ -14,7 +14,7 @@ use Cake\ORM\Entity;
  * @property int $pincode
  * @property string $email
  * @property int $phone
- * @property \Cake\I18n\FrozenTime $created_at
+ * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
  * @property \App\Model\Entity\Appoinment[] $appoinments
@@ -40,7 +40,7 @@ class Patient extends Entity
         'pincode' => true,
         'email' => true,
         'phone' => true,
-        'created_at' => true,
+        'created' => true,
         'modified' => true,
         'appoinments' => true,
         'invoice' => true

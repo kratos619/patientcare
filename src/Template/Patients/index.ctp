@@ -27,7 +27,7 @@
                 <th scope="col"><?= $this->Paginator->sort('pincode') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -43,7 +43,7 @@
                 <td><?= $this->Number->format($patient->pincode) ?></td>
                 <td><?= h($patient->email) ?></td>
                 <td><?= $this->Number->format($patient->phone) ?></td>
-                <td><?= h($patient->created_at) ?></td>
+                <td><?= h($patient->created) ?></td>
                 <td><?= h($patient->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $patient->id]) ?>

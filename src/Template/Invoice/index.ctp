@@ -22,8 +22,8 @@
                 <th scope="col"><?= $this->Paginator->sort('ammount') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('services') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('duedate') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified_at') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,8 +35,8 @@
                 <td><?= $this->Number->format($invoice->ammount) ?></td>
                 <td><?= h($invoice->services) ?></td>
                 <td><?= h($invoice->duedate) ?></td>
-                <td><?= h($invoice->created_at) ?></td>
-                <td><?= h($invoice->modified_at) ?></td>
+                <td><?= h($invoice->created) ?></td>
+                <td><?= h($invoice->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $invoice->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $invoice->id]) ?>

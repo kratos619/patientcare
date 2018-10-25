@@ -39,12 +39,12 @@
             <td><?= h($invoice->duedate) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created At') ?></th>
-            <td><?= h($invoice->created_at) ?></td>
+            <th scope="row"><?= __('Created') ?></th>
+            <td><?= h($invoice->created) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Modified At') ?></th>
-            <td><?= h($invoice->modified_at) ?></td>
+            <th scope="row"><?= __('Modified') ?></th>
+            <td><?= h($invoice->modified) ?></td>
         </tr>
     </table>
 </div>

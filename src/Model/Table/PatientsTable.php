@@ -101,11 +101,6 @@ class PatientsTable extends Table
             ->requirePresence('phone', 'create')
             ->notEmpty('phone');
 
-        $validator
-            ->dateTime('created_at')
-            ->requirePresence('created_at', 'create')
-            ->notEmpty('created_at');
-
         return $validator;
     }
 

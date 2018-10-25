@@ -28,8 +28,6 @@
             echo $this->Form->control('patient_id', ['options' => $patients]);
             echo $this->Form->control('doctor_id', ['options' => $doctors]);
             echo $this->Form->control('appoinment_date');
-            echo $this->Form->control('created_at');
-            echo $this->Form->control('modified_at');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

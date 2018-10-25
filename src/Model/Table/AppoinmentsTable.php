@@ -20,6 +20,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Appoinment patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Appoinment[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Appoinment findOrCreate($search, callable $callback = null, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
 class AppoinmentsTable extends Table
 {
@@ -37,6 +39,8 @@ class AppoinmentsTable extends Table
         $this->setTable('appoinments');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->addBehavior('Timestamp');
 
         $this->belongsTo('Patients', [
             'foreignKey' => 'patient_id',
@@ -64,16 +68,6 @@ class AppoinmentsTable extends Table
             ->dateTime('appoinment_date')
             ->requirePresence('appoinment_date', 'create')
             ->notEmpty('appoinment_date');
-
-        $validator
-            ->dateTime('created_at')
-            ->requirePresence('created_at', 'create')
-            ->notEmpty('created_at');
-
-        $validator
-            ->dateTime('modified_at')
-            ->requirePresence('modified_at', 'create')
-            ->notEmpty('modified_at');
 
         return $validator;
     }
