@@ -19,12 +19,11 @@
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('city') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('state') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('pincode') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
+               
+               
+               
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+               
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,12 +34,11 @@
                 <td><?= h($patient->name) ?></td>
                 <td><?= h($patient->address) ?></td>
                 <td><?= h($patient->city) ?></td>
-                <td><?= h($patient->state) ?></td>
-                <td><?= $this->Number->format($patient->pincode) ?></td>
-                <td><?= h($patient->email) ?></td>
-                <td><?= $this->Number->format($patient->phone) ?></td>
-                <td><?= h($patient->created) ?></td>
-                <td><?= h($patient->modified) ?></td>
+                
+               
+                
+                <td><?= h($patient->phone) ?></td>
+               
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $patient->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $patient->id]) ?>
