@@ -97,7 +97,8 @@ class PatientsTable extends Table
             ->notEmpty('email');
 
         $validator
-            ->integer('phone')
+            ->scalar('phone')
+            ->maxLength('phone', 255)
             ->requirePresence('phone', 'create')
             ->notEmpty('phone');
 
