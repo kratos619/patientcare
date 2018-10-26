@@ -38,11 +38,11 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Pincode') ?></th>
-            <td><?= $this->Number->format($patient->pincode) ?></td>
+            <td><?= h($patient->pincode) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Phone') ?></th>
-            <td><?= $this->Number->format($patient->phone) ?></td>
+            <td><?= h($patient->phone) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -59,7 +59,7 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Patient Id') ?></th>
+                
                 <th scope="col"><?= __('Doctor Id') ?></th>
                 <th scope="col"><?= __('Appoinment Date') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
@@ -69,8 +69,8 @@
             <?php foreach ($patient->appoinments as $appoinments): ?>
             <tr>
                 <td><?= h($appoinments->id) ?></td>
-                <td><?= h($appoinments->patient_id) ?></td>
-                <td><?= h($appoinments->doctor_id) ?></td>
+             
+                <td><?= $this->Format->getName($appoinments->doctor_id,'doctors') ?></td>
                 <td><?= h($appoinments->appoinment_date) ?></td>
                 <td><?= h($appoinments->created) ?></td>
                 <td><?= h($appoinments->modified) ?></td>
@@ -90,23 +90,23 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Patient Id') ?></th>
+             
                 <th scope="col"><?= __('Ammount') ?></th>
                 <th scope="col"><?= __('Services') ?></th>
                 <th scope="col"><?= __('Duedate') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
+             
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($patient->invoice as $invoice): ?>
             <tr>
                 <td><?= h($invoice->id) ?></td>
-                <td><?= h($invoice->patient_id) ?></td>
+             
                 <td><?= h($invoice->ammount) ?></td>
                 <td><?= h($invoice->services) ?></td>
                 <td><?= h($invoice->duedate) ?></td>
                 <td><?= h($invoice->created) ?></td>
-                <td><?= h($invoice->modified) ?></td>
+               
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Invoice', 'action' => 'view', $invoice->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Invoice', 'action' => 'edit', $invoice->id]) ?>
